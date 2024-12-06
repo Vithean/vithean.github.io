@@ -1,0 +1,3 @@
+- Getting started
+  - [Subscription](get-started/subscription.md)
+  - [How to signup](get-started/signup.md)
