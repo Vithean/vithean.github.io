@@ -3,7 +3,7 @@
 
 ## Simplified, Customized & Affordable
 
-> Complex Accounting Works Made Easy. Just Let Vithean Do Its work for you.
+> Complex Accounting Works Made Easy. Just Let Vithean Do the work for you.
 
 Take the advantages of your smart accounting, digitally. Vithean is your smart accounting of choice and the best solutions to make your work faster and easier.
 
