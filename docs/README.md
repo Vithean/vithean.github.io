@@ -48,5 +48,5 @@ For direct help, visit our [documentation][docs-url].
 
 [chat]: https://vithean.com/wp-content/uploads/assets/vithean-logo-512-n-150x150.png
 [chat-url]: https://t.me/vithean_support
-[docs-url]: https://app.vithean.com/kb
+[docs-url]: https://help.vithean.com
 [poscar-url]: https://poscardigital.com
