@@ -1,67 +1,97 @@
-# About
+# **About**
 
-> As cloud base system, the release and update would happen regularly base on feedback and issue found.
+> **As a cloud-based system, updates and releases occur regularly based on user feedback and identified issues.**
 
-# I. User Manual Revisions
+---
 
-## December 5th, 2025
-- Simplify user manual for public
-- Transform to Web Document
+# **I. User Manual Revisions**
 
-# II. System Release Notes
-> Some release notes will be added here for users' information
+### **December 5th, 2025**
+- Simplified the user manual for public use.
+- Transformed the manual into a web document.
 
-## v1.1.x - December 6th, 2024
+---
 
-- Fix issue on Bank Reconciliation does not show the latest reconcilation info of related bank account
-- Improvement on Invoice Template
-  - Formatted phone number (company and customer)
-  - Adjust logo print position
-  - Align exchange rate
-  - Allow configure display exchange rate at footer
+# **II. System Release Notes**
 
-- Improvement on Invoice/Bill List Page
-  - Add Paid Status column which display unpaid, fully paid or partially paid (for only approved invoices/Bills)
-  - Add Outstanding Amount column 
-  
-- Security improvement(2)
-- Improvement on accounting posting(1)
+> **Release notes are provided to keep users informed about updates and improvements.**
 
-## v1.1.x - November 22nd, 2024
+---
 
-1. Apply correction on 2024-11-08-Test Log-Acc Form-JV OR PV & Others-v1.xlsx — Remaining point 7 in LOG-I  Rounding different
-2. Enable print Payment Voucher 
-3. Improvement on App Security (V1)
-4. Improvement on User Add-ons Subscription Management
-. Allow user to add/substract add-ons user qty on Upgrade/Renew plan
-. In User Main List, allow user to re-activate previous disabled add-ons user in case Company has enough user add-ons qty.
+## **v1.1.x - December 6th, 2024**
+### **Fixes**
+- Resolved an issue where Bank Reconciliation did not display the latest reconciliation information for related bank accounts.
 
-## v1.1.x - October 31st, 2024
-1. Trial Balance Report
-  * Apply Retained Earning
-  * Correct balance of Profit& Loss accounts to accumulate only in report fiscal year related. 
-2. Invoice Template Customization
-  * Form Header: Add Header Style which allow user to switch the display or Invoice Header between Justified or Center display.
-  * Form Header: Allow user to configure change separator (use / or indent to new line) between En label and Kh label.
-  * Table: Allow user to adjust column width
-  * Form Footer:  Allow user to configure additional remarks info below memo
+### **Improvements**
+#### **Invoice Template**
+- Formatted phone numbers for both company and customer fields.
+- Adjusted the logo print position.
+- Aligned the exchange rate display.
+- Enabled configuration for displaying the exchange rate in the footer.
 
-3. Journal Voucher Printout/Accounting Form
-  * Allow user to print one or multiple Journal Voucher from Journal View and Journal List View
-  * Allow user to customize some fields information before print
-  * Allow Save as Generic Template 
+#### **Invoice/Bill List Page**
+- Added a "Paid Status" column to display statuses: unpaid, fully paid, or partially paid (for approved invoices/bills only).
+- Added an "Outstanding Amount" column.
 
-4. Receipt Printout/Accounting Form
-  * Allow user to print one or multiple receipt from Collection View and List View
-  * Allow user to customize some fields information before print
-  * Allow Save Generic Template 
+#### **General Improvements**
+- Enhanced system security (Phase 2).
+- Improved accounting posting processes (Phase 1).
 
+---
 
-5. Other Improvement
-  * [Support] Bank Reconciliation: refresh transaction in book on view/edit
-  * Bank Reconciliation performance improvement
-  * Report Balance Sheet/ Profit and Loss/ General Ledger: improve query performance
-  * Role: prevent user disable super admin role
-  * Chart of Account: prevent user delete account that linked to Fixed Asset Classification
-  * New Goods Receipt: set default goods receipt date to the latest added goods receipt transaction date.
-  * Goods Receipt: Prevent user approve later transaction before earlier transaction.
+## **v1.1.x - November 22nd, 2024**
+### **Fixes**
+1. Corrected rounding differences as outlined in `Feedback documents` (remaining point 7 in LOG-I).
+
+### **Improvements**
+- Enabled print functionality for Payment Vouchers.
+- Enhanced app security (Phase 1).
+- Improved add-on subscription management:
+  - Allowed users to add or subtract add-on quantities during plan upgrades/renewals.
+  - Enabled reactivation of previously disabled add-on users, provided the company has sufficient add-on quantities.
+
+---
+
+## **v1.1.x - October 31st, 2024**
+### **Reports**
+#### **Trial Balance Report**
+- Applied retained earnings.
+- Corrected Profit & Loss account balances to accumulate only for the relevant fiscal year.
+
+#### **Invoice Template Customization**
+- **Form Header**:  
+  - Added a "Header Style" option to toggle between justified and centered header displays.  
+  - Enabled configuration to change the separator between English (En) and Khmer (Kh) labels (use "/" or a new line).
+- **Table**:  
+  - Allowed column width adjustments.  
+- **Form Footer**:  
+  - Added an option to configure additional remarks below the memo section.
+
+---
+
+### **Print Features**
+#### **Journal Voucher Printout/Accounting Form**
+- Enabled printing of single or multiple journal vouchers from both Journal View and Journal List View.
+- Allowed customization of field information before printing.
+- Added the option to save as a generic template.
+
+#### **Receipt Printout/Accounting Form**
+- Enabled printing of single or multiple receipts from both Collection View and List View.
+- Allowed customization of field information before printing.
+- Added the option to save as a generic template.
+
+---
+
+### **Other Improvements**
+- **Bank Reconciliation**:  
+  - Enabled transaction refresh on view/edit.  
+  - Improved reconciliation performance.  
+- **Reports**:  
+  - Enhanced query performance for Balance Sheet, Profit & Loss, and General Ledger reports.  
+- **Roles**:  
+  - Prevented users from disabling the Super Admin role.  
+- **Chart of Accounts**:  
+  - Prevented deletion of accounts linked to Fixed Asset Classification.  
+- **Goods Receipt**:  
+  - Set the default goods receipt date to the most recent transaction date.  
+  - Prevented approval of later transactions before earlier transactions.

@@ -1,25 +1,42 @@
-# Vithean
+# **Vithean**
 
 <img align="center" width="350" style="margin:auto; width: 350px;" title="logo" src="assets/images/logo.png">
 
-Vithean is your smart accounting of choice and the best solutions to make your work faster and easier
+**Vithean** is your smart accounting solution of choice, offering the best tools to make your work faster and easier.
 
+For more detailed information about Vithean, visit our [website][website-url].
 
-For more detailed information about Vithean in general take a look at the [website][website-url]
+---
 
+## **Releases**
 
-## Releases
+Stay updated on the latest changes and improvements in Vithean by reviewing our [CHANGELOG](CHANGELOG.md).
 
-See [CHANGELOG](CHANGELOG.md).
+---
 
+## **License**
 
-## LICENSE
+**Vithean** is a commercial product. Learn more about the license by visiting the [LICENSE](LICENSE) page.
 
-[Commercial](LICENSE)
+For further details, check out our [Terms and Conditions][tc-url] and [Privacy Policy][privacy-url].
 
-Check out our [term and condition][tc-url] and [privacy policy][privacy-url].
+---
 
-All rights reserved © 2024, [POSCAR Digital Co., Ltd.][poscar-url]
+**All rights reserved © 2024, [POSCAR Digital Co., Ltd.][poscar-url]**
+
+---
+
+## **Quick Links**
+- **Website**: [Vithean Homepage][website-url]  
+- **App**: [Vithean Application][app-url]  
+- **Terms and Conditions**: [View Here][tc-url]  
+- **Privacy Policy**: [View Here][privacy-url]  
+- **Support**:  
+   - [Facebook][fb-url]  
+   - [Telegram][telegram-url]  
+
+For direct help, visit our [documentation][docs-url].
+
 
 [website-url]: https://vithean.com
 [app-url]: https://app.vithean.com
