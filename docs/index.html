@@ -71,7 +71,7 @@
         auto2top: true,
         mergeNavbar: true,
         search: 'auto',
-        coverpage: false,
+        coverpage: true,
         alias: {
           '/.*/_sidebar.md': '/_sidebar.md'
         },
@@ -82,8 +82,8 @@
             hook.afterEach(function (html) {
               return (
                 html +
-                '<p>The document may not up to date to the latest version of software, if any misuse or not clear, please reach us via <a href="mailto:contact@vithean.com">contact@vithean.com</a></p>' +
-                '<p>All rights reserved © 2024 - 05-12-2024, <a href="https://poscardigital.com" target="_blank">POSCAR Digital Co., Ltd.</a></p>'
+                '<p>The document may not reflect the latest version of the software. If you encounter any issues or have questions, please reach out to us at <a href="mailto:contact@vithean.com">contact@vithean.com</a>.</p>' +
+                '<p>All rights reserved © 2024 - (Documented: 5th December 2024), <a href="https://poscardigital.com" target="_blank">POSCAR Digital Co., Ltd.</a></p>'
               )
             })
           },

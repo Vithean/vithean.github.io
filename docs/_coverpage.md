@@ -1,11 +1,12 @@
-
 <img align="center" width="350" style="margin:auto; width: 350px;" title="logo" src="assets/images/logo.png">
 
-## Simplified, Customized & Affordable
+## **Simplified, Customized & Affordable**
 
-> Complex Accounting Works Made Easy. Just Let Vithean Do the work for you.
+> **Complex Accounting Made Easy. Let Vithean handle the work for you.**
 
-Take the advantages of your smart accounting, digitally. Vithean is your smart accounting of choice and the best solutions to make your work faster and easier.
+
+Take advantage of **smart, digital accounting** with **Vithean**. <br/>It’s your trusted solution for simplifying complex accounting tasks, making your work faster, easier, and more efficient.
+
 
 [Subscribe Now](https://app.vithean.com/signup/packages)
 [User Manual](#vithean)
