@@ -2,7 +2,7 @@
   - [Subscription](get-started/subscription.md)
   - [How to signup](get-started/signup.md)
   - [Initial company setup](get-started/initial-company-setup.md)
-  - [About Menu Access](get-started/menu-access.md)
+  <!-- - [About Menu Access](get-started/menu-access.md) -->
 
 - System Setup
   - [Company Setting](system-setup/company-setting.md)

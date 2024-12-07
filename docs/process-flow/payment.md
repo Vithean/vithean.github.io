@@ -2,12 +2,36 @@
 
 # Payment
 
-- **Step 1**:  Go to “**Quick Access**” the dropdown list will appear and select on “**Create Payment**”
+Follow these steps to create and manage payments:
+
+---
+
+### **Step 1:**  
+Navigate to **“Quick Access”**. A dropdown list will appear; select **“Create Payment”**.  
 <img align="center" style="margin:auto; width:837px" title="Payment" src="../process-flow/images/07/02-07-01.png">
 
-- **Step 2**: Payment Screen will appear and select on “**Account Payables**” for payment to suppliers
-- **Step 3**: On icon “**Choose Vendor**” click on drop down list and select the Vendor name
-- **Step 4**: To fill the info per below snapshot
-- **Step 5**: Select on “**Save** or **Save & Add New** or **Post**”
-- **Step 6**: After you select on “**Save** or **Save & Add New** or **Post**” the Credit Note list will appear and we need to click on “**Action**” icon and select on “**Approve**” on dropdown list.
+---
+
+### **Step 2:**  
+The Payment screen will appear. Select **“Account Payables”** for making payments to suppliers.
+
+---
+
+### **Step 3:**  
+Click on the **“Choose Vendor”** icon. Open the dropdown list and select the **Vendor Name**.
+
+---
+
+### **Step 4:**  
+Fill in the required information as shown in the snapshot below.
+
+---
+
+### **Step 5:**  
+Choose either **“Save,” “Save & Add New,”** or **“Post”** to complete the action.
+
+---
+
+### **Step 6:**  
+After saving or posting, the Credit Note list will appear. Click on the **“Action”** icon and select **“Approve”** from the dropdown list.  
 <img align="center" style="margin:auto; width:837px" title="Payment" src="../process-flow/images/07/02-07-02.png">

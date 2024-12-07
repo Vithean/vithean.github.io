@@ -2,10 +2,26 @@
 
 # Transfer
 
-- **Step 1**:  Go to “**Quick Access**” the dropdown list will appear and select on “**Create Transfer**”
+Follow these steps to create and manage a transfer:
+
+---
+
+### **Step 1:**  
+Navigate to **“Quick Access”**. A dropdown list will appear; select **“Create Transfer”**.  
 <img align="center" style="margin:auto; width:837px" title="Transfer" src="../process-flow/images/06/02-06-01.png">
 
-- **Step 2**: To fill the info per below snapshot
-- **Step 3**: Select on “**Save** or **Save & Add New** or **Post**”
-- **Step 4**: After you select on “**Save** or **Save & Add New** or **Post**” the Credit Note list will appear and we need to click on “**Action**” icon and select on “**Approve**” on dropdown list.
+---
+
+### **Step 2:**  
+Fill in the required information as shown in the snapshot below.
+
+---
+
+### **Step 3:**  
+Choose either **“Save,” “Save & Add New,”** or **“Post”** to complete the action.
+
+---
+
+### **Step 4:**  
+After saving or posting, the Credit Note list will appear. Click on the **“Action”** icon and select **“Approve”** from the dropdown list.  
 <img align="center" style="margin:auto; width:837px" title="Transfer" src="../process-flow/images/06/02-06-02.png">

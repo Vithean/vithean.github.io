@@ -1,78 +1,77 @@
 <img align="center" width="200" style="margin:auto; width: 200px;" title="logo" src="../assets/images/logo.png"><br/>
 
-# Sign up
+# Sign Up
 
-**Vithean** is our overall pick for the best small business accounting software. If you 
-don’t already have a subscription, new users can choose between a 30-day free trial.
-When you sign up, **Vithean** requires you to have your email, your name, and phone number.
+**Vithean** is our top pick for the best small/medium business accounting software. If you don’t already have a subscription, new users can take advantage of a 30-day free trial. To sign up, **Vithean** requires your email, name, and phone number.
 
-**Vithean** has 3 packages for you to choose from :
+### **Packages**
+**Vithean** offers three packages for you to choose from:
 - **Basic Package**
-- **Standard package**
-- **Advance package**
+- **Standard Package**
+- **Advanced Package**  
 
 <img align="center" style="margin:auto; width:837px" title="Sign up" src="../get-started/images/01/01-01.png">
 
-  
-Choose one (Basic package, Standard package, Advance package).
-  1. If you want to use 30 days for free, Click **Free 30 Days Trial**.
-  2.  If you would like to subscrip any package, Click **Buy Now** on that package.
+---
+
+### **Choose a Package**
+1. To use the **30-Day Free Trial**, click **Free 30 Days Trial**.
+2. To subscribe to a package, click **Buy Now** for the desired package.  
 
 <img align="center" style="margin:auto; width:837px" title="Sign up" src="../get-started/images/01/01-02.png">
 
+---
 
-Some information required to sign up : **Email address, First name, last name** and**Phone Number**.
+### **Required Information for Sign Up**
+To sign up, you’ll need:
+- **Email Address**
+- **First Name**
+- **Last Name**
+- **Phone Number**
 
 <img align="center" style="margin:auto; width:837px" title="Sign up" src="../get-started/images/01/01-03.png">
 
+---
 
-Your registration is completed, Please check your email to activate your account and 
-create your username and password.
+### **Complete Registration**
+Once you’ve registered, check your email to activate your account. You’ll be prompted to create a username and password.
 
 <img align="center" style="margin:auto; width:837px" title="Sign up" src="../get-started/images/01/sign%20up02.04png.png">
 
+---
 
-
-Log in to your registered email account , Search for message sent by Vithean click 
-the **Click Here Bottun** to verify your account.
+### **Email Verification**
+Log in to your registered email account and locate the email sent by **Vithean**. Click the **“Click Here” Button** to verify your account.
 
 <img align="center" style="margin:auto; width:837px" title="Sign up" src="../get-started/images/01/01-05.1.png">
 
+---
 
-Enter your username and password to sign in to Vithean account.
+### **Sign In**
+After verification, enter your username and password to log in to your **Vithean** account.
 
 <img align="center" style="margin:auto; width:837px" title="Sign up" src="../get-started/images/01/01-06.png">
 
+---
 
+### **Account Creation Success**
 Your account has been successfully created.
 
 <img align="center" style="margin:auto; width:837px" title="Sign up" src="../get-started/images/01/01-07.png">
 
+---
 
-Enter your username and password to set-up company.
+### **Set Up Your Company**
+Log in with your username and password to begin setting up your company.
 
 <img align="center" style="margin:auto; width:837px" title="Sign up" src="../get-started/images/01/01-08.png">
 
+---
 
+# Common Issues
 
+### **Not Receiving the Signup Email**
+Ensure that you check your spam or junk folder. If the email is not found, try resending the activation email or contact support.
 
-
-
-
-
-
-
-
-
-
-
-
-
-# Common Issue
-
-## Not receiving signup email
-
-
-## Any other issue
-
-Please [Contact Us](contact.md).
+### **Other Issues**
+For further assistance, please [Contact Us](contact.md).

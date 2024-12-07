@@ -2,12 +2,27 @@
 
 # Customers
 
-- **Step 1**: Go to “**List**” and select “**Customers**” to create new customer
+Follow these steps to create and manage customer records:
+
+---
+
+### **Step 1:**  
+Navigate to **“List”** and select **“Customers”** to create a new customer entry.  
 <img align="center" style="margin:auto; width:837px" title="Customers" src="../data/images/02/03-02-01.png">
 
-- **Step 2**: Click on “**Add**” for create by manual or Import and export all vendor by **import or export function**
-- **Step 3**: Choose Add and fill the Customer information
-<img align="center" style="margin:auto; width:837px" title="Customers" src="../data/images/02/03-02-02.png">
+---
+
+### **Step 2:**  
+Click on **“Add”** to create a customer manually, or use the **Import** or **Export** functions to manage all customer data in bulk.
+
+---
+
+### **Step 3:**  
+If creating manually, click **“Add”** and fill in the required customer information.  
+<img align="center" style="margin:auto; width:837px" title="Customers" src="../data/images/02/03-02-02.png">  
 <img align="center" style="margin:auto; width:837px" title="Customers" src="../data/images/02/03-02-03.png">
 
-- **Step 4**: Select on “**Save** or **Save & Add New**”
+---
+
+### **Step 4:**  
+Choose either **“Save”** or **“Save & Add New”** to complete the action.

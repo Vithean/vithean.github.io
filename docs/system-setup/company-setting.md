@@ -2,5 +2,5 @@
 
 # Company Setting
 
-To fill informaon per system request.
+To fill information per system request.
 <img align="center" style="margin:auto; width:837px" title="Company setup" src="../system-setup/images/01/01-01-01.png">
