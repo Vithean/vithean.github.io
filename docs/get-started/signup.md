@@ -5,10 +5,10 @@
 **Vithean** is our top pick for the best small/medium business accounting software. If you don’t already have a subscription, new users can take advantage of a 30-day free trial. To sign up, **Vithean** requires your email, name, and phone number.
 
 ### **Packages**
-**Vithean** offers three packages for you to choose from:
-- **Basic Package**
-- **Standard Package**
-- **Advanced Package**  
+**Vithean** offers [three packages](https://app.vithean.com/signup/packages) for you to choose from:
+- [**Basic Package**](https://app.vithean.com/signup/register?packageId=66e06e6c-0bd2-4377-8908-95d4a88ec3ac&paymentMode=MONTHLY&buyNow=false)
+- [**Standard Package**](https://app.vithean.com/signup/register?packageId=40949891-b6ca-46a9-b627-a061ccaebe8d&paymentMode=MONTHLY&buyNow=false)
+- [**Advanced Package**](https://app.vithean.com/signup/register?packageId=10422bb4-256e-4e4f-a540-72f53528a11e&paymentMode=MONTHLY&buyNow=false)
 
 <img align="center" style="margin:auto; width:837px" title="Sign up" src="../get-started/images/01/01-01.png">
 
@@ -66,6 +66,8 @@ Log in with your username and password to begin setting up your company.
 
 <img align="center" style="margin:auto; width:837px" title="Sign up" src="../get-started/images/01/01-08.png">
 
+---
+#### Have you signed up for 30-day trial yet, choose your package [here](https://app.vithean.com/signup/packages)?
 ---
 
 # Common Issues

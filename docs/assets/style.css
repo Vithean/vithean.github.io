@@ -1,6 +1,15 @@
 :root {
   --theme-color: #6F3075;
 }
+a {
+  text-decoration: none;
+}
+.markdown-section p a, 
+.markdown-section p a strong,
+.markdown-section li a, 
+.markdown-section li a strong  {
+  color:rgb(34, 139, 34) !important;
+}
 .markdown-section p {
   font-size: 1.125rem;
   line-height: 1.7;
