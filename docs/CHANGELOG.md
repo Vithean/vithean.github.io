@@ -17,6 +17,18 @@
 > **Release notes are provided to keep users informed about updates and improvements.**
 
 ---
+## **v1.2.0.24121101 - December 17th, 2024**
+
+**Improvement**
+
+- Receipt Printing: Now user can print Reciept from Invoice List (from Paid Invoice'entry actions) and from Paid Invoice View page
+- Payment Voucher Printing: Now user can print Payment Voucher from Bill List (from Paid Bill'entry actions) and Paid Bill View
+- Bank Reconciliation: Allow user to filter by Bank Account Number and Ending Balance
+- Collection List: Add column Collection Type and allow user to fitler by collection Type
+- Payment List: Add column Payment Type and allow user to filter by payment type
+- Add Help Menu (Near Notification Menu/Bell icon)
+
+---
 
 ## **v1.1.x - December 6th, 2024**
 ### **Fixes**
