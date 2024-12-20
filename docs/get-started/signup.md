@@ -67,7 +67,8 @@ Log in with your username and password to begin setting up your company.
 <img align="center" style="margin:auto; width:837px" title="Sign up" src="../get-started/images/01/01-08.png">
 
 ---
-#### Have you signed up for 30-day trial yet, choose your package [here](https://app.vithean.com/signup/packages)?
+**Have you signed up for 30-day trial yet, choose your package [here](https://app.vithean.com/signup/packages)?**
+
 ---
 
 # Common Issues
