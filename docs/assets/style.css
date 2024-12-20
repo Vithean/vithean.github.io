@@ -1,18 +1,27 @@
 :root {
   --theme-color: #6F3075;
 }
+*,
+.anchor span {
+  color: var(--text_color);
+}
 a {
   text-decoration: none;
 }
+.markdown-section a,
 .markdown-section p a, 
 .markdown-section p a strong,
 .markdown-section li a, 
 .markdown-section li a strong  {
   color:rgb(34, 139, 34) !important;
 }
+
 .markdown-section p {
   font-size: 1.125rem;
   line-height: 1.7;
+}
+.markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section strong {
+  color: var(--text_color);
 }
 .nav {
   width: var(--toc-width, 15rem);
@@ -78,7 +87,7 @@ a {
   -ms-letter-spacing: 0.1em;
   letter-spacing: 0.1em;
   /* text-transform: uppercase; */
-  color: inherit;
+  color: var(--text_color);
 }
 .sidebar ul li.active > a {
   background: #f5f5f5;
