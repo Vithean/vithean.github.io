@@ -17,6 +17,34 @@
 > **Release notes are provided to keep users informed about updates and improvements.**
 
 ---
+## **v1.2.0.24122001 - December 23th, 2024**
+
+**Improvement**
+1. Bank Account List 
+- Add column Last Reconciliation Balance
+- Add toolstip info(help icon)  in column Last Reconciliation Period and Last Reconciliation Balance
+
+2. [Support] Bank Reconciliation  Improvement
+ In Start Reconciliation Screen -- Bank Reconciliation Information
+- Add tools tip info for Opening balance per bank field
+- Refresh the opening balance per bank value if the user modifies or redoes the bank reconciliation. 
+The opening balance value is retrieved from the ending balance per bank of the previous bank reconciliation period for the related bank account, including drafted or pending approval transactions. (Previous feature: retrieved only from approved bank reconciliations.)
+
+- When user start reconcile or draft the bank reconciliation, Opening balance per bank and Started Date  are retreived from the latest reconcile transaction for the selected bank account (Chart of Accounts), including drafted or pending approval transactions. (Previous feature: retrieved only from latest approved bank reconciliations.).
+
+3. Invoice List - Print Invoice
+- Now user can Print Invoice from every approved invoice entryImprovement
+
+4. Add Type column of related List Module
+-  Item List: Add Item Type column and allow to filter by Item type
+-  Bill List: Add Bill Type column and allow user to filter by Bill Type
+-  Invoice List: Add Invoice Type column and allow user to filter by Invoice Type
+-  Credit Note List: Add Credit Note Type column adn allow user to filter by Credit Note Type
+
+5. Payment Voucher/Receipt Template Change Request
+-  Add new Reference No field which display at the half right side in same line as Payment Method at the right side
+
+---
 ## **v1.2.0.24121101 - December 17th, 2024**
 
 **Improvement**
