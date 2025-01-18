@@ -17,6 +17,19 @@
 > **Release notes are provided to keep users informed about updates and improvements.**
 
 ---
+## **v1.2.0.25011601 - January 17th, 2025**
+
+1. Add new Name Local column in each Master Data List View (Customer, Vendor, Item, Class, Warehouse, Job) and also allow to export this column.
+2. Fix General Payment function value rounding issue
+
+## **v1.2.0.25011401 - January 14th, 2025**
+
+
+1. Add Payment Voucher 2 Template
+2. Invoice Template Customization
+- Add VAT column in table column (Tax by entry)
+- Allow user to configure text alignment in each table column
+
 ## **v1.2.0.24122001 - December 23th, 2024**
 
 **Improvement**
