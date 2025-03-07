@@ -17,13 +17,37 @@
 > **Release notes are provided to keep users informed about updates and improvements.**
 
 ---
+## **v1.2.0.25022401 (March 07, 2025)**
+
+**Part 4: Over more features**
+1. Enable Sale Settings for Standard/Basic Subscription Package
+2. Enable Printing Credit Note Accounting Form
+3. Bill List: Add Memo column and allow to export
+
+**Part 3: Performance improvement**
+1. Debit Note: Fix issue Debit Note Journal contains null text 
+2. Journal: Prevent posting imbalance journal (revalidate total debt/credit on posting
+3. General Ledger Report: preventing over fetch data that lead to out of memory
+4. Performance Improvement on accounting transaction posting 
+5. Move reverse sale cost process into background task
+
+**Part 2: Template and some Chart of Accounts improvement**
+1. Commercial Invoice Template Customization and Printing: The new invoice template will not display the VAT information field, and the Unit Price will include VAT on the printed invoice.
+2. Chart of Account: Prevent user delete account used in OPB drafted transaction.
+3. Credit Note: Add field Billing Address (KH)
+
+**Part 1: Open Balance Migration Improvement**
+1. Opening Balance Migration Export: Split Chart of Accounts column info into 3 different columns
+2. Improve Address Component
+3. Remove Cache Refresh Permission from Permission UI
+
+---
 ## **v1.2.0.25011601 - January 17th, 2025**
 
 1. Add new Name Local column in each Master Data List View (Customer, Vendor, Item, Class, Warehouse, Job) and also allow to export this column.
 2. Fix General Payment function value rounding issue
 
 ## **v1.2.0.25011401 - January 14th, 2025**
-
 
 1. Add Payment Voucher 2 Template
 2. Invoice Template Customization
