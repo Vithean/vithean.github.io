@@ -44,14 +44,6 @@ We’re excited to share the latest improvements in Vithean! This release brings
 6. **Export Issue Resolved**
    * Fixed an issue where exported reports occasionally showed duplicate data.
 
-### ⚙️ **System Improvements**
-
-7. **Clean System Logging**
-   * Optimized internal logging to reduce unnecessary system warnings.
-
-8. **Improved Error Handling**
-   * Enhanced privacy by removing sensitive details from technical error messages.
-
 ---
 
 ## 🗓️ **Earlier Updates – March 2025**
