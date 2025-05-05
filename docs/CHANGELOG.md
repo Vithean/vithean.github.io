@@ -16,11 +16,11 @@
 
 > **Release notes are provided to keep users informed about updates and improvements.**
 
+We’re excited to share the latest improvements in Vithean! This release brings new features, refinements, and important fixes to help streamline your accounting workflow.
+
 ---
 
 ## 📦 **Vithean Release Notes – Version 1.2.0 (April 2025)**
-
-We’re excited to share the latest improvements in Vithean! This release brings new features, refinements, and important fixes to help streamline your accounting workflow.
 
 ### ✨ **New Features & Enhancements**
 
