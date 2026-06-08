@@ -228,10 +228,20 @@
   color: var(--vithean-purple-soft);
 }
 
-/* Action buttons (Start / Watch tutorials / Open app) — give them room to breathe */
+/* Action buttons (Read manual / Watch tutorials / Open app) — single row at desktop */
 :root .hero .actions {
   margin-top: 1.4rem;
-  gap: 0.85rem 1rem;
+  gap: 0.7rem 0.85rem;
+}
+
+@media (min-width: 50rem) {
+  :root .hero .actions {
+    flex-wrap: nowrap;           /* keep all three on one line */
+    align-items: center;
+  }
+  :root .hero .actions :is(a, button) {
+    white-space: nowrap;          /* labels don't break mid-word */
+  }
 }
 
 /* ============================================================
