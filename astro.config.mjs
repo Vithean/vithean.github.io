@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 import mdx from '@astrojs/mdx';
 
 export default defineConfig({
-  site: 'https://vithean.github.io',
+  site: 'https://help.vithean.com',
 
   integrations: [
     starlight({
@@ -39,7 +39,7 @@ export default defineConfig({
         },
         {
           tag: 'meta',
-          attrs: { property: 'og:image', content: 'https://vithean.github.io/og-image.png' },
+          attrs: { property: 'og:image', content: 'https://help.vithean.com/og-image.png' },
         },
         {
           tag: 'meta',
