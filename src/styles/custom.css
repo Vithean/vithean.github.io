@@ -1,0 +1,565 @@
+/* ============================================================
+   Vithean brand palette — purple #6F3075
+   Generated tints/shades stay tonally consistent with the logo.
+   ============================================================ */
+:root {
+  --vithean-purple:        #6F3075;
+  --vithean-purple-soft:   #9959a0;   /* +20% L — for dark-mode accents, hover tints */
+  --vithean-purple-pale:   #f3eaf6;   /* near-white wash — for soft backgrounds */
+  --vithean-purple-deep:   #501f56;   /* -15% L — hover state on primary buttons */
+  --vithean-gold:          #d4a017;   /* warm secondary accent */
+}
+
+/* ------- Light theme ------- */
+/* In Starlight's tokens: --sl-color-white = highest-emphasis text,
+   --sl-color-black = page background. The names are inverted relative to the
+   actual color; both must be re-defined per theme. */
+:root,
+[data-theme='light'] {
+  --sl-color-accent-low:  var(--vithean-purple-pale);
+  --sl-color-accent:      var(--vithean-purple);
+  --sl-color-accent-high: var(--vithean-purple-deep);
+
+  --sl-color-white:       #1a1024;   /* primary text */
+  --sl-color-gray-1:      #271a32;
+  --sl-color-gray-2:      #3d2d4a;
+  --sl-color-gray-3:      #6b5a78;
+  --sl-color-gray-4:      #968aa0;
+  --sl-color-gray-5:      #e6dfeb;
+  --sl-color-gray-6:      #f4eef7;
+  --sl-color-gray-7:      #fbf8fc;
+  --sl-color-black:       #ffffff;   /* page background */
+
+  --sl-color-bg:          #ffffff;
+  --sl-color-bg-nav:      rgba(255, 255, 255, 0.85);
+  --sl-color-bg-sidebar:  #fbf8fc;
+  --sl-color-text:        var(--sl-color-white);
+  --sl-color-text-accent: var(--vithean-purple-deep);
+}
+
+/* ------- Dark theme ------- */
+[data-theme='dark'] {
+  --sl-color-accent-low:  #2a1632;
+  --sl-color-accent:      var(--vithean-purple-soft);
+  --sl-color-accent-high: #e6cee9;
+
+  /* Inverted from light: text becomes near-white, bg becomes near-black. */
+  --sl-color-white:       #f5eef7;   /* primary text */
+  --sl-color-gray-1:      #e6d9eb;
+  --sl-color-gray-2:      #cbb6d2;
+  --sl-color-gray-3:      #9a8aa3;
+  --sl-color-gray-4:      #6d5d76;
+  --sl-color-gray-5:      #3a2c44;
+  --sl-color-gray-6:      #261b30;
+  --sl-color-gray-7:      #1a1024;
+  --sl-color-black:       #0d0716;   /* page background */
+
+  --sl-color-bg:          #14101a;
+  --sl-color-bg-nav:      rgba(20, 16, 26, 0.85);
+  --sl-color-bg-sidebar:  #14101a;
+  --sl-color-text:        var(--sl-color-white);
+  --sl-color-text-accent: #d6b8da;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+:root {
+  /* Inter renders Latin; Kantumruy Pro auto-handles Khmer glyphs via the
+     unicode-range fallback in the Google Fonts stylesheet. */
+  --sl-font:
+    'Inter', 'Kantumruy Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    system-ui, sans-serif;
+  --sl-font-mono:
+    'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+
+/* Explicit class for Khmer-first text (use sparingly — automatic fallback
+   already handles inline Khmer in mostly-Latin content). */
+.khmer,
+:lang(km) {
+  font-family: 'Kantumruy Pro', 'Inter', system-ui, sans-serif;
+  line-height: 1.55;
+}
+
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3 {
+  letter-spacing: -0.015em;
+}
+
+.sl-markdown-content h2 {
+  margin-top: 2.4rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--sl-color-gray-5);
+}
+
+/* "User Manual" badge next to logo in header.
+   Renders via ::after so it works with replacesTitle:true (logo replaces text). */
+.site-title::after {
+  content: 'User Manual';
+  display: inline-block;
+  margin-inline-start: 0.55rem;
+  padding: 0.22rem 0.65rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: var(--vithean-purple-pale);
+  color: var(--vithean-purple-deep);     /* 9:1 contrast on pale wash */
+  border: 1px solid color-mix(in srgb, var(--vithean-purple) 25%, transparent);
+  vertical-align: 0.18em;
+  line-height: 1;
+}
+
+[data-theme='dark'] .site-title::after {
+  background: color-mix(in srgb, var(--vithean-purple) 28%, transparent);
+  color: #f1e2f3;                         /* near-white tint for dark bg */
+  border-color: color-mix(in srgb, var(--vithean-purple-soft) 45%, transparent);
+}
+
+@media (max-width: 50rem) {
+  /* Hide the badge on very narrow screens to give the search bar room */
+  .site-title::after { display: none; }
+}
+
+/* ============================================================
+   Imagery — both Markdown ![]() and legacy <img> tags
+   ============================================================ */
+.sl-markdown-content img:not(.no-zoom):not([data-no-zoom]) {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px -10px rgba(80, 31, 86, 0.18);
+  border: 1px solid var(--sl-color-gray-5);
+}
+
+/* Override inline width="" / style="width:..." that came from the old Docsify pages */
+.sl-markdown-content img[width] {
+  width: auto !important;
+  max-width: min(100%, 837px);
+}
+
+[data-theme='dark'] .sl-markdown-content img {
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 28px -10px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================================
+   Splash-page hero (landing)
+   Uses `:root .hero` to win specificity over Starlight's component-scoped
+   .hero[data-astro-cid-*] defaults (which would otherwise clobber padding/gap).
+   ============================================================ */
+:root .hero {
+  position: relative;
+  padding-block: clamp(3rem, calc(2rem + 4vmin), 5.5rem);
+}
+
+@media (min-width: 50rem) {
+  :root .hero {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    gap: clamp(2.5rem, 6vw, 5rem);   /* generous breathing room between text & logo */
+    align-items: center;
+  }
+
+  :root .hero .stack {
+    padding-block: 0.5rem;             /* vertical breathing room on text column */
+    max-width: 38rem;
+  }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -1rem -2rem;                  /* slight bleed for the gradient */
+  background:
+    radial-gradient(900px circle at 18% 0%,
+      color-mix(in srgb, var(--vithean-purple) 22%, transparent) 0%,
+      transparent 55%),
+    radial-gradient(800px circle at 95% 100%,
+      color-mix(in srgb, var(--vithean-gold) 14%, transparent) 0%,
+      transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+  border-radius: 24px;
+}
+
+:root .hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  background: linear-gradient(135deg,
+    var(--vithean-purple) 0%,
+    var(--vithean-purple-soft) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+:root .hero .tagline {
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  color: var(--sl-color-gray-2);
+  max-width: 38ch;
+  line-height: 1.55;
+  margin-top: 0.25rem;
+}
+
+/* "User Manual" eyebrow above hero title */
+:root .hero h1::before {
+  content: 'User Manual';
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vithean-purple);
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  background: none;
+  margin-bottom: 0.9rem;
+}
+
+[data-theme='dark'] :root .hero h1::before {
+  color: var(--vithean-purple-soft);
+}
+
+/* Action buttons (Start / Watch tutorials / Open app) — give them room to breathe */
+:root .hero .actions {
+  margin-top: 1.4rem;
+  gap: 0.85rem 1rem;
+}
+
+/* ============================================================
+   Feature cards on landing
+   ============================================================ */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 2.5rem 0;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 14px;
+  background: var(--sl-color-gray-7);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 32px -14px rgba(111, 48, 117, 0.3);
+  border-color: var(--vithean-purple-soft);
+}
+
+[data-theme='dark'] .feature-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Soft tint of accent on Starlight's own Card component */
+.sl-markdown-content :is(.card) {
+  border-radius: 14px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+.sl-markdown-content :is(.card):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -14px rgba(111, 48, 117, 0.28);
+  border-color: var(--vithean-purple-soft);
+}
+
+/* ============================================================
+   Video grid (tutorials index)
+   ============================================================ */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.video-card {
+  display: block;
+  text-decoration: none !important;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--sl-color-gray-5);
+  background: var(--sl-color-gray-7);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -14px rgba(111, 48, 117, 0.35);
+  border-color: var(--vithean-purple-soft);
+}
+
+.video-card .thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-card .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+  display: block;
+}
+
+.video-card .thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center,
+      rgba(111, 48, 117, 0.35) 0%,
+      rgba(0, 0, 0, 0.55) 80%);
+  opacity: 0;
+  transition: opacity 0.18s ease;
+}
+
+.video-card:hover .thumb::after { opacity: 1; }
+
+.video-card .play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  transform: scale(0.85);
+  pointer-events: none;
+}
+.video-card:hover .play-btn { opacity: 1; transform: scale(1); }
+
+.video-card .play-btn svg {
+  width: 64px;
+  height: 64px;
+  fill: white;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+}
+
+.video-card .video-meta {
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.video-card .video-title {
+  font-weight: 600;
+  color: var(--sl-color-white);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+}
+
+.video-card .video-date {
+  font-size: 0.8rem;
+  color: var(--sl-color-gray-3);
+  margin: 0.4rem 0 0;
+}
+
+[data-theme='dark'] .video-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.video-meta-line {
+  color: var(--sl-color-gray-3);
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.video-empty {
+  border: 1px dashed var(--sl-color-gray-4);
+  border-radius: 14px;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  color: var(--sl-color-gray-3);
+  margin: 1.5rem 0;
+  background: var(--sl-color-gray-7);
+}
+
+/* ============================================================
+   Per-video page
+   ============================================================ */
+.video-page-header {
+  margin-bottom: 1.5rem;
+}
+
+.video-page-eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--vithean-purple);
+}
+
+[data-theme='dark'] .video-page-eyebrow {
+  color: var(--vithean-purple-soft);
+}
+
+.video-player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  margin: 0 0 1.5rem;
+  box-shadow: 0 16px 40px -16px rgba(80, 31, 86, 0.35);
+}
+
+.video-player iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-description {
+  white-space: pre-wrap;
+  line-height: 1.65;
+  color: var(--sl-color-gray-2);
+}
+
+.video-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2.5rem 0 0;
+  border-top: 1px solid var(--sl-color-gray-5);
+  padding-top: 1.5rem;
+}
+
+.video-nav a {
+  display: block;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 12px;
+  text-decoration: none !important;
+  transition: border-color 0.18s ease, transform 0.18s ease;
+}
+
+.video-nav a:hover {
+  border-color: var(--vithean-purple-soft);
+  transform: translateY(-2px);
+}
+
+.video-nav .nav-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sl-color-gray-3);
+}
+
+.video-nav .nav-title {
+  margin-top: 0.3rem;
+  font-weight: 600;
+  color: var(--sl-color-white);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.video-nav .next { text-align: right; }
+.video-nav .placeholder { visibility: hidden; }
+
+/* ============================================================
+   CTA buttons (used on landing + content pages)
+   ============================================================ */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: transform 0.12s ease, box-shadow 0.12s ease,
+    background 0.12s ease;
+}
+
+.cta-primary {
+  background: var(--vithean-purple);
+  color: white !important;
+  box-shadow: 0 4px 12px -2px rgba(111, 48, 117, 0.4);
+}
+
+.cta-primary:hover {
+  background: var(--vithean-purple-deep);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -4px rgba(111, 48, 117, 0.5);
+}
+
+.cta-secondary {
+  border: 1.5px solid var(--vithean-purple);
+  color: var(--vithean-purple) !important;
+  background: transparent;
+}
+
+.cta-secondary:hover {
+  background: var(--sl-color-accent-low);
+}
+
+[data-theme='dark'] .cta-secondary {
+  border-color: var(--vithean-purple-soft);
+  color: var(--vithean-purple-soft) !important;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.vithean-footer {
+  margin-top: 4rem;
+  padding: 2rem 0 1.5rem;
+  border-top: 1px solid var(--sl-color-gray-5);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--sl-color-gray-3);
+  line-height: 1.6;
+}
+
+.vithean-footer a {
+  color: var(--vithean-purple);
+  text-decoration: none;
+}
+
+[data-theme='dark'] .vithean-footer a {
+  color: var(--vithean-purple-soft);
+}
+
+.vithean-footer a:hover {
+  text-decoration: underline;
+}
+
+.vithean-footer .footer-notice {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}

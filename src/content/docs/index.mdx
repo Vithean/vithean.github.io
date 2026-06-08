@@ -1,0 +1,72 @@
+---
+title: Vithean User Manual
+description: Everything you need to use Vithean — guides, screenshots, and video tutorials in one place.
+template: splash
+hero:
+  tagline: Everything you need to use Vithean — guides, screenshots, and video tutorials in one place.
+  image:
+    file: ../../assets/logo.png
+  actions:
+    - text: Start with subscription
+      link: /get-started/subscription/
+      icon: right-arrow
+      variant: primary
+    - text: Watch tutorials
+      link: /tutorials/
+      icon: seti:video
+    - text: Open the app
+      link: https://app.vithean.com
+      icon: right-arrow
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+import FeaturedVideo from '../../components/FeaturedVideo.astro';
+
+<FeaturedVideo />
+
+## Where do you want to start?
+
+<CardGrid>
+  <Card title="Getting started" icon="open-book">
+    Brand new to Vithean? [Pick a subscription](/get-started/subscription/),
+    [sign up](/get-started/signup/), and [set up your company](/get-started/initial-company-setup/) in minutes.
+  </Card>
+  <Card title="System setup" icon="seti:config">
+    Configure [company settings](/system-setup/company-setting/),
+    [users & permissions](/system-setup/user-administration/), and
+    [interface language](/system-setup/change-language/).
+  </Card>
+  <Card title="Record transactions" icon="add-document">
+    [Bills](/process-flow/bill/), [Invoices](/process-flow/invoice/),
+    [Journals](/process-flow/journal/), [Payments](/process-flow/payment/),
+    [Collections](/process-flow/collection/) and more.
+  </Card>
+  <Card title="Reports" icon="list-format">
+    Run the [Profit and Loss report](/reports/profit-and-loss/) and other
+    financial reports.
+  </Card>
+  <Card title="Video tutorials" icon="seti:video">
+    Watch short, focused videos from our team. The
+    [tutorials page](/tutorials/) updates automatically.
+  </Card>
+  <Card title="Need help?" icon="comment-alt">
+    Check the [FAQ](/troubleshoot/faq/), browse the
+    [changelog](/changelog/), or [contact support](/contact/).
+  </Card>
+</CardGrid>
+
+## About this manual
+
+This is the **official user manual** for [Vithean](https://vithean.com) — a
+cloud-based accounting platform built for small and medium businesses. The
+manual is updated continuously as the product evolves.
+
+* **Software product:** [app.vithean.com](https://app.vithean.com)
+* **Main website:** [vithean.com](https://vithean.com)
+* **Latest release notes:** [Changelog](/changelog/)
+
+:::tip[Tip]
+Use the search box at the top of the page (or press <kbd>Ctrl</kbd> + <kbd>K</kbd>)
+to jump straight to any topic.
+:::

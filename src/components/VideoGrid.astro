@@ -1,0 +1,81 @@
+---
+// Tutorials index — card grid linking to per-video pages (/tutorials/<slug>/).
+import videosData from '../data/videos.json';
+
+interface Video {
+  id: string;
+  slug: string;
+  title: string;
+  url: string;
+  thumbnail: string;
+  thumbnailHQ?: string;
+  published?: string | null;
+  author?: string | null;
+  description?: string;
+}
+
+interface VideoData {
+  playlistId?: string;
+  playlistUrl?: string;
+  updatedAt?: string | null;
+  count?: number;
+  videos?: Video[];
+  error?: string;
+}
+
+const data = videosData as VideoData;
+const videos: Video[] = data.videos ?? [];
+const updated = data.updatedAt
+  ? new Date(data.updatedAt).toLocaleDateString(undefined, {
+      year: 'numeric', month: 'long', day: 'numeric',
+    })
+  : null;
+const playlistUrl = data.playlistUrl ?? null;
+
+function formatDate(iso?: string | null) {
+  if (!iso) return null;
+  return new Date(iso).toLocaleDateString(undefined, {
+    year: 'numeric', month: 'short', day: 'numeric',
+  });
+}
+---
+
+{videos.length === 0 ? (
+  <div class="video-empty">
+    <p><strong>Tutorials are on the way.</strong></p>
+    <p style="margin-top:0.5rem;">
+      Video tutorials will appear here automatically once the playlist is published.
+      {playlistUrl && (<> In the meantime you can <a href={playlistUrl} target="_blank" rel="noopener">visit our playlist on YouTube</a>.</>)}
+    </p>
+  </div>
+) : (
+  <>
+    <p class="video-meta-line">
+      <strong>{videos.length}</strong> tutorial{videos.length === 1 ? '' : 's'}
+      {updated && (<> &middot; last refreshed {updated}</>)}
+      {playlistUrl && (<> &middot; <a href={playlistUrl} target="_blank" rel="noopener">View full playlist on YouTube ↗</a></>)}
+    </p>
+
+    <div class="video-grid">
+      {videos.map((v) => (
+        <a class="video-card" href={`/tutorials/${v.slug}/`} title={v.title}>
+          <div class="thumb">
+            <img src={v.thumbnail} alt={v.title} loading="lazy" width="320" height="180" />
+            <div class="play-btn" aria-hidden="true">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.6)"/>
+                <path d="M26 20 L46 32 L26 44 Z" fill="white"/>
+              </svg>
+            </div>
+          </div>
+          <div class="video-meta">
+            <p class="video-title">{v.title}</p>
+            {formatDate(v.published) && (
+              <p class="video-date">{formatDate(v.published)}</p>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </>
+)}

@@ -1,0 +1,25 @@
+{
+  "name": "vithean-manual",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "predev": "node scripts/fetch-videos.mjs --quiet",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "prebuild": "node scripts/fetch-videos.mjs",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "fetch:videos": "node scripts/fetch-videos.mjs",
+    "fetch:videos:force": "node scripts/fetch-videos.mjs --force"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.0.3",
+    "@astrojs/starlight": "^0.30.6",
+    "astro": "^5.1.1",
+    "sharp": "^0.33.5",
+    "typescript": "^5.7.2"
+  }
+}
