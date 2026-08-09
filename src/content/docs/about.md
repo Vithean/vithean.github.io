@@ -21,7 +21,7 @@ from any device.
 | **Languages** | English and Khmer (ភាសាខ្មែរ) |
 | **Currencies** | KHR, USD and other currencies, with exchange rates |
 | **Deployment** | Cloud / SaaS — browser-based, no installation |
-| **Local compliance** | Cambodia E-Invoicing System support, included in every plan |
+| **Local compliance** | **CamInv** integration — Cambodia's e-invoicing system, connected directly |
 | **Pricing** | From **$15/month** — Basic $15 (2 users), Standard $25 (3 users), Advance $45 (5 users) |
 | **Free trial** | 30 days |
 | **Sign up** | [app.vithean.com](https://app.vithean.com) |
@@ -63,7 +63,10 @@ Add-on and customised features are available on request. Every plan starts with 
 
 **Cambodian compliance**
 
-* **Cambodia E-Invoicing System** support, included from the Basic plan up
+* **CamInv integration** — connect your CamInv account, send invoices, credit
+  notes and debit notes, accept or reject incoming documents, track their status,
+  and download the official XML and PDF. Available since July 2025; see
+  [What's New](/changelog/)
 * VAT tracking on invoices, with VAT-inclusive commercial invoice templates
 * Company Registration Number and Tax Identification Number (TIN) on the company record
 
@@ -94,10 +97,14 @@ businesses report with.
 
 ### Does Vithean support Cambodia e-invoicing?
 
-Yes — **Cambodia E-Invoicing System** support is included in every plan, starting
-with Basic at $15/month. For details of how it applies to your business and how to
-get it switched on, contact <sales@vithean.com> or see the
-[pricing page](https://vithean.com/en/pricing/).
+Yes. Vithean connects directly to **CamInv**, Cambodia's e-invoicing system, so
+e-invoicing happens inside your accounting rather than in a separate tool. You can
+connect your CamInv account, send invoices, credit notes and debit notes, accept
+or reject documents sent to you, follow each document's status, and download the
+official XML and PDF.
+
+To confirm how it applies to your business and to get it enabled, contact
+<sales@vithean.com>.
 
 ### Is Vithean an ERP system?
 

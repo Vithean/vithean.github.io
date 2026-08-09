@@ -46,10 +46,10 @@ head:
           },
           {
             "@type": "Question",
-            "name": "Does Vithean support the Cambodia E-Invoicing System?",
+            "name": "Does Vithean support Cambodia e-invoicing (CamInv)?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. Cambodia E-Invoicing System support is included in every Vithean plan, starting with Basic at 15 US dollars per month. Contact sales@vithean.com for details on enabling it for your business."
+              "text": "Yes. Vithean connects directly to CamInv, Cambodia's e-invoicing system. You can connect your CamInv account, send invoices, credit notes and debit notes, accept or reject incoming documents, track each document's status, and download the official XML and PDF. Contact sales@vithean.com to confirm how it applies to your business and to get it enabled."
             }
           },
           {
@@ -199,8 +199,11 @@ started directly from [Subscription](/get-started/subscription/).
 
 ### Does Vithean support Cambodia e-invoicing?
 
-Yes — **Cambodia E-Invoicing System** support is included in every plan, from Basic
-upward. Contact <sales@vithean.com> for details on enabling it for your business.
+Yes. Vithean connects directly to **CamInv**, Cambodia's e-invoicing system —
+connect your account, send invoices, credit notes and debit notes, accept or reject
+incoming documents, track their status, and download the official XML and PDF.
+Contact <sales@vithean.com> to confirm how it applies to your business and to get
+it enabled.
 
 ### Can I change my plan later?
 
@@ -332,7 +335,7 @@ activation email from the sign-up screen, or
 ### Something in the manual doesn't match what I see on screen
 
 The manual may lag slightly behind the latest release. Check the
-[Changelog](/changelog/) for recent changes, and please tell us at
+[What's New](/changelog/) for recent changes, and please tell us at
 <contact@vithean.com> so we can correct the page.
 
 ### I still need help

@@ -28,7 +28,7 @@ const structuredData = {
       areaServed: { '@type': 'Country', name: 'Cambodia' },
       countriesSupported: 'KH',
       featureList: [
-        'Cambodia E-Invoicing System support',
+        'CamInv integration for Cambodia e-invoicing — send, receive, track and download official documents',
         'Sales invoicing with VAT tracking and customisable invoice templates',
         'Supplier bills and payments',
         'Customer collections and credit notes',
@@ -303,7 +303,7 @@ export default defineConfig({
           items: [{ label: 'FAQ', slug: 'troubleshoot/faq' }],
         },
         {
-          label: 'Changelog',
+          label: "What's New",
           link: '/changelog/',
         },
         {
