@@ -46,6 +46,25 @@ function isCacheFresh() {
   }
 }
 
+// ---- Stable slugs -----------------------------------------------------------
+// Slugs are normally derived from the video title, which means retitling on
+// YouTube silently moves the /tutorials/<slug>/ URL and 404s the old one.
+// Pin a slug here (keyed by YouTube video ID) to decouple the URL from the
+// title, so videos can be retitled freely for search without breaking links
+// or the sitemap. Anything not listed keeps the title-derived slug.
+const SLUG_OVERRIDES = {
+  hz40bmNaQmg: 'how-to-create-sales-invoice-by-items-vithean-user-guide',
+  wqwszk_sKSk: 'how-to-create-sales-invoice-vithean-user-guide',
+  dpOIcuK3Vak: 'how-to-create-goods-transfer-from-one-to-another-warehouse-v',
+  '1zzXjUX4ukM': 'how-to-create-goods-return-to-vendor-vithean-user-guide',
+  _1uoO6Mr7eg: 'how-to-create-payment-cash-on-delivery-vithean-user-guide',
+  'VwPH-4uL99s': 'how-to-create-transfer-cashbank-vithean-user-guide',
+  'Gtcxb-dKSl0': 'credit-note-how-to-create-cn-thru-price-adjust-vithean-user-',
+  '6-cj-AfFp0o': 'credit-note-how-to-create-cn-thru-goods-return-vithean-user-',
+  'xwYyPss_k-c': 'how-to-create-a-supplier-invoice-vithean-user-guide',
+  btxIivBnjds: 'vithean-how-to-register-vithean-account-vithean-user-guide',
+};
+
 // ---- Helpers ----------------------------------------------------------------
 function slugify(s) {
   return (s || '')
@@ -80,7 +99,7 @@ function parseEntries(xml) {
     const id = get('yt:videoId');
     if (!id) continue;
     const title = decodeEntities(get('title') || '');
-    const baseSlug = slugify(title) || id.toLowerCase();
+    const baseSlug = SLUG_OVERRIDES[id] || slugify(title) || id.toLowerCase();
     entries.push({
       id,
       slug: baseSlug,
