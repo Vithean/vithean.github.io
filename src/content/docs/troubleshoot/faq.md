@@ -38,10 +38,18 @@ head:
           },
           {
             "@type": "Question",
-            "name": "Which subscription plans does Vithean offer?",
+            "name": "How much does Vithean cost?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Three plans: Basic, Standard and Advanced. The number of users you can create depends on the plan you purchased. You can change plans at any time."
+              "text": "Vithean starts at 15 US dollars per month for the Basic plan with 2 users. Standard is 25 US dollars per month for 3 users and adds standard inventory management and price setting. Advance is 45 US dollars per month for 5 users and adds multiple locations, fixed asset management, advanced inventory management, and control and authorisation. Add-on and customised features are available on request, and every plan starts with a 30-day free trial."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Vithean support the Cambodia E-Invoicing System?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Cambodia E-Invoicing System support is included in every Vithean plan, starting with Basic at 15 US dollars per month. Contact sales@vithean.com for details on enabling it for your business."
             }
           },
           {
@@ -177,11 +185,22 @@ Four things: your **email address**, **first name**, **last name** and
 button, then create your username and password. Full walkthrough:
 [How to sign up](/get-started/signup/).
 
-### Which plans are available?
+### Which plans are available, and how much do they cost?
 
-Three — **Basic**, **Standard** and **Advanced**. Current rates are on the
+| Plan | Price | Users | Adds |
+|---|---|---|---|
+| **Basic** | $15/month | 2 | Multiple languages, invoicing, VAT tracking, bank reconciliation, financial reports, import function, Cambodia E-Invoicing System |
+| **Standard** | $25/month | 3 | + Standard inventory management, price setting |
+| **Advance** | $45/month | 5 | + Multiple locations, fixed asset management, advanced inventory management, control and authorisation |
+
+Add-on and customised features are available on request. Current rates are on the
 [Vithean pricing page](https://vithean.com/en/pricing/), and each plan can be
 started directly from [Subscription](/get-started/subscription/).
+
+### Does Vithean support Cambodia e-invoicing?
+
+Yes — **Cambodia E-Invoicing System** support is included in every plan, from Basic
+upward. Contact <sales@vithean.com> for details on enabling it for your business.
 
 ### Can I change my plan later?
 

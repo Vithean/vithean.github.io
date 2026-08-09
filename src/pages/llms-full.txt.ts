@@ -47,11 +47,14 @@ export const GET: APIRoute = async () => {
 
 Vithean is a cloud-based online accounting and business management system for
 small and medium businesses in Cambodia, built by POSCAR Digital Co., Ltd.
-It handles invoicing with VAT, bills, journals, credit notes, payments,
-collections, bank reconciliation, customers and vendors, and financial reports
-including Profit and Loss. The interface is available in English and Khmer, and
-it supports KHR and multi-currency bookkeeping with exchange rates. Subscription
-plans are Basic, Standard and Advanced, with a 30-day free trial.
+It supports the Cambodia E-Invoicing System and handles invoicing with VAT
+tracking, bills, journals, credit notes, payments, collections, bank
+reconciliation, customers and vendors, inventory across multiple locations and
+warehouses, fixed assets, and financial reports including Profit and Loss. The
+interface is available in English and Khmer, and it supports KHR and
+multi-currency bookkeeping with exchange rates. Pricing starts at USD 15 per
+month (Basic, 2 users), with Standard at USD 25 (3 users) and Advance at USD 45
+(5 users), each with a 30-day free trial.
 
 Manual:  ${SITE}/
 Product: https://app.vithean.com

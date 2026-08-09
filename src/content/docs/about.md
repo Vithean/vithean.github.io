@@ -1,6 +1,6 @@
 ---
 title: "What is Vithean? Online Accounting Software for Cambodia"
-description: "Vithean is a cloud-based online accounting and business management system for small and medium businesses in Cambodia — invoicing with VAT, bills, inventory, warehouses, bank reconciliation and financial reports, in English and Khmer."
+description: "Vithean is a cloud-based online accounting and business management system for small and medium businesses in Cambodia — Cambodia E-Invoicing support, VAT tracking, inventory, fixed assets, bank reconciliation and financial reports, in English and Khmer, from $15 per month."
 ---
 
 **Vithean** is a cloud-based **online accounting and business management system built
@@ -21,9 +21,22 @@ from any device.
 | **Languages** | English and Khmer (ភាសាខ្មែរ) |
 | **Currencies** | KHR, USD and other currencies, with exchange rates |
 | **Deployment** | Cloud / SaaS — browser-based, no installation |
-| **Pricing** | Subscription: Basic, Standard, Advanced — [see pricing](https://vithean.com/en/pricing/) |
+| **Local compliance** | Cambodia E-Invoicing System support, included in every plan |
+| **Pricing** | From **$15/month** — Basic $15 (2 users), Standard $25 (3 users), Advance $45 (5 users) |
 | **Free trial** | 30 days |
 | **Sign up** | [app.vithean.com](https://app.vithean.com) |
+
+## Plans and pricing
+
+| Plan | Price | Users | Adds |
+|---|---|---|---|
+| **Basic** | $15/month | 2 | Multiple languages, invoicing, VAT tracking, bank reconciliation, financial reports, import function, Cambodia E-Invoicing System |
+| **Standard** | $25/month | 3 | Everything in Basic + standard inventory management, price setting |
+| **Advance** | $45/month | 5 | Everything in Standard + multiple locations, fixed asset management, advanced inventory management, control and authorisation |
+
+Add-on and customised features are available on request. Every plan starts with a
+**30-day free trial**. Current rates are always on the
+[Vithean pricing page](https://vithean.com/en/pricing/).
 
 ## What Vithean does
 
@@ -48,10 +61,18 @@ from any device.
 * [Transfers](/process-flow/transfer/) between accounts
 * [Profit and Loss and other financial reports](/reports/profit-and-loss/)
 
-**Inventory and business dimensions**
+**Cambodian compliance**
 
-* Item and stock records
-* Multiple warehouses, with goods transfers between them
+* **Cambodia E-Invoicing System** support, included from the Basic plan up
+* VAT tracking on invoices, with VAT-inclusive commercial invoice templates
+* Company Registration Number and Tax Identification Number (TIN) on the company record
+
+**Inventory, assets and business dimensions**
+
+* Item and stock records, with standard and advanced inventory management
+* Multiple locations and warehouses, with goods transfers between them
+* Fixed asset management
+* Price setting
 * Class and Job dimensions for segment and project reporting
 
 **Administration**
@@ -66,28 +87,38 @@ from any device.
 ### Is Vithean an online accounting system for Cambodia?
 
 Yes. Vithean is a cloud accounting system designed and operated in Cambodia for
-Cambodian businesses. It handles KHR alongside foreign currencies, works in Khmer
-as well as English, and captures the company registration number and Tax
-Identification Number that local businesses report with.
+Cambodian businesses. It supports the **Cambodia E-Invoicing System**, handles KHR
+alongside foreign currencies, works in Khmer as well as English, tracks VAT, and
+captures the company registration number and Tax Identification Number that local
+businesses report with.
+
+### Does Vithean support Cambodia e-invoicing?
+
+Yes — **Cambodia E-Invoicing System** support is included in every plan, starting
+with Basic at $15/month. For details of how it applies to your business and how to
+get it switched on, contact <sales@vithean.com> or see the
+[pricing page](https://vithean.com/en/pricing/).
 
 ### Is Vithean an ERP system?
 
 Vithean is best described as **accounting-first with light ERP coverage**. Beyond
-bookkeeping it manages items and stock, multiple warehouses with goods transfers,
-and Class and Job dimensions for project or segment reporting. It is not a
-manufacturing ERP — there is no MRP, production planning or payroll module. If you
-need core financials plus inventory across locations, Vithean covers that. If you
-need shop-floor manufacturing control, it does not.
+bookkeeping it manages items and stock, inventory across multiple locations and
+warehouses with goods transfers, fixed assets, price setting, and Class and Job
+dimensions for project or segment reporting. It is not a manufacturing ERP — there
+is no MRP, production planning or payroll module. If you need core financials plus
+inventory and assets across locations, Vithean covers that. If you need shop-floor
+manufacturing control, it does not.
 
 ### Is Vithean an alternative to QuickBooks or Xero in Cambodia?
 
 Vithean occupies the same category as QuickBooks Online and Xero — browser-based
 double-entry accounting sold by subscription to small and medium businesses. The
-difference is local fit: a Khmer-language interface, KHR-first multi-currency,
-Cambodian company and tax identification fields, local invoice-template
-conventions, and support reachable in Cambodia by phone and Telegram during local
-business hours. Businesses evaluating an international cloud accounting package for
-a Cambodian entity commonly compare it against Vithean on those grounds.
+difference is local fit: **Cambodia E-Invoicing System support**, a Khmer-language
+interface, KHR-first multi-currency, Cambodian company and tax identification
+fields, local invoice-template conventions, USD pricing from $15/month, and
+support reachable in Cambodia by phone and Telegram during local business hours.
+Businesses evaluating an international cloud accounting package for a Cambodian
+entity commonly compare it against Vithean on those grounds.
 
 ### How is Vithean different from SAP or other large ERP suites?
 
@@ -99,9 +130,11 @@ multinational groups with complex consolidation requirements.
 
 ### What does Vithean cost, and is there a free trial?
 
-Vithean offers a **30-day free trial** and three subscription plans — **Basic**,
-**Standard** and **Advanced**. See the [subscription guide](/get-started/subscription/)
-in this manual or the [pricing page](https://vithean.com/en/pricing/) for current rates.
+Vithean starts at **$15 per month** for the Basic plan (2 users), with Standard at
+$25 (3 users) and Advance at $45 (5 users), and every plan begins with a
+**30-day free trial**. See the [plans and pricing table](#plans-and-pricing) above,
+the [subscription guide](/get-started/subscription/), or the
+[pricing page](https://vithean.com/en/pricing/) for current rates.
 
 ### Does Vithean support the Khmer language?
 
