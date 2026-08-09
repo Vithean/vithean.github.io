@@ -150,7 +150,40 @@ The workflow `.github/workflows/deploy.yml` does this automatically:
 1. **Source:** GitHub Actions
 2. **Custom domain (optional):** `help.vithean.com`
 
-When ready to cut over from Docsify, merge `astro-migration` → `main`.
+The Astro site is live on `main`. The old Docsify site is preserved at the
+`archive/gh-pages` tag.
+
+> **Watch out:** GitHub can auto-disable the `Build & Deploy` workflow after a
+> long quiet period (`disabled_inactivity`). A disabled workflow silently ignores
+> **all** triggers including `push`, and the site keeps serving the last
+> successful build, so nothing looks broken. If pushes stop appearing live, run
+> `gh workflow list --all` and re-enable it.
+
+---
+
+## Search and AI discoverability
+
+Do not delete these — they are load-bearing:
+
+| File | Purpose |
+|---|---|
+| `public/robots.txt` | Explicitly allows ~25 AI crawlers and advertises the sitemap |
+| `public/.nojekyll` | Stops GitHub Pages running Jekyll, which would strip `_astro/` |
+| `public/<32-hex>.txt` | **IndexNow key.** The filename *is* the key; renaming or removing it breaks URL submission to Bing |
+| `src/pages/llms.txt.ts` | Generates `/llms.txt` from the docs collection |
+| `src/pages/llms-full.txt.ts` | Generates `/llms-full.txt`, the whole manual as plain text |
+
+Product facts (pricing, features) live in the JSON-LD block at the top of
+`astro.config.mjs` and are duplicated on `vithean.com/en/pricing/` — change both
+together.
+
+To notify Bing of new or updated pages:
+
+```bash
+curl -X POST https://api.indexnow.org/indexnow \
+  -H 'Content-Type: application/json' \
+  -d '{"host":"help.vithean.com","key":"<key>","keyLocation":"https://help.vithean.com/<key>.txt","urlList":["https://help.vithean.com/"]}'
+```
 
 ---
 
