@@ -251,6 +251,10 @@ export default defineConfig({
           link: '/about/',
         },
         {
+          label: 'Choosing accounting software',
+          link: '/choosing-accounting-software-cambodia/',
+        },
+        {
           label: 'Getting Started',
           items: [
             { label: 'Subscription', slug: 'get-started/subscription' },
