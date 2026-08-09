@@ -1,0 +1,128 @@
+# robots.txt — help.vithean.com (Vithean user manual)
+# Vithean — cloud accounting / ERP for businesses in Cambodia, by POSCAR Digital Co., Ltd.
+#
+# Policy: this manual is public documentation. We explicitly welcome search
+# engines, AI answer engines and AI training crawlers. Nothing here is gated.
+
+# ---------------------------------------------------------------------------
+# Default: everything, everyone
+# ---------------------------------------------------------------------------
+User-agent: *
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Traditional search (Bing also feeds Microsoft Copilot)
+# ---------------------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# OpenAI — training, ChatGPT search index, user-triggered browsing
+# ---------------------------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Anthropic (Claude)
+# ---------------------------------------------------------------------------
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Google Gemini / AI Overviews (separate opt-in from Googlebot)
+# ---------------------------------------------------------------------------
+User-agent: Google-Extended
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Perplexity
+# ---------------------------------------------------------------------------
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Apple Intelligence / Siri
+# ---------------------------------------------------------------------------
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Meta AI
+# ---------------------------------------------------------------------------
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Common Crawl — feeds a large share of open training corpora
+# ---------------------------------------------------------------------------
+User-agent: CCBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Other answer engines and AI crawlers
+# ---------------------------------------------------------------------------
+User-agent: Amazonbot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: cohere-training-data-crawler
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: omgili
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# ---------------------------------------------------------------------------
+# Machine-readable indexes
+# ---------------------------------------------------------------------------
+Sitemap: https://help.vithean.com/sitemap-index.xml
+
+# LLM-oriented summaries (llmstxt.org convention):
+#   https://help.vithean.com/llms.txt        — index of every page
+#   https://help.vithean.com/llms-full.txt   — full manual as plain text

@@ -3,13 +3,105 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import mdx from '@astrojs/mdx';
 
+/**
+ * Schema.org JSON-LD describing the product this manual documents.
+ * Consumed by Google (AI Overviews / knowledge panel), Bing/Copilot and the
+ * retrieval layer of AI answer engines, which prefer explicit machine-readable
+ * facts over prose inference.
+ */
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'SoftwareApplication',
+      '@id': 'https://vithean.com/#software',
+      name: 'Vithean',
+      alternateName: 'Vithean Accounting',
+      applicationCategory: 'BusinessApplication',
+      applicationSubCategory: 'Accounting Software',
+      operatingSystem: 'Web browser (cloud-based)',
+      url: 'https://vithean.com',
+      sameAs: ['https://app.vithean.com', 'https://linktr.ee/Vithean'],
+      description:
+        'Vithean is a cloud-based online accounting and business management system for small and medium businesses in Cambodia. It covers invoicing with VAT, bills, journals, credit notes, payments, collections, bank reconciliation, items and warehouses, and financial reports such as Profit and Loss, in English and Khmer.',
+      inLanguage: ['en', 'km'],
+      areaServed: { '@type': 'Country', name: 'Cambodia' },
+      countriesSupported: 'KH',
+      featureList: [
+        'Sales invoicing with VAT and customisable invoice templates',
+        'Supplier bills and payments',
+        'Customer collections and credit notes',
+        'Double-entry journal entries',
+        'Bank reconciliation and account transfers',
+        'Customer and vendor master data',
+        'Item, stock and multi-warehouse management with goods transfers',
+        'Class and Job dimensions for segment and project reporting',
+        'Profit and Loss and other financial reports',
+        'Multi-currency bookkeeping including KHR with exchange rates',
+        'Multi-user access with roles and permissions',
+        'English and Khmer interface',
+      ],
+      offers: {
+        '@type': 'AggregateOffer',
+        url: 'https://vithean.com/en/pricing/',
+        priceCurrency: 'USD',
+        offerCount: 3,
+        offers: [
+          { '@type': 'Offer', name: 'Basic Package', category: 'subscription' },
+          { '@type': 'Offer', name: 'Standard Package', category: 'subscription' },
+          { '@type': 'Offer', name: 'Advanced Package', category: 'subscription' },
+        ],
+      },
+      softwareHelp: { '@id': 'https://help.vithean.com/#manual' },
+      publisher: { '@id': 'https://poscardigital.com/#organization' },
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://poscardigital.com/#organization',
+      name: 'POSCAR Digital Co., Ltd.',
+      url: 'https://poscardigital.com',
+      address: { '@type': 'PostalAddress', addressCountry: 'KH' },
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          contactType: 'customer support',
+          email: 'support@vithean.com',
+          telephone: '+855-95-56-95-68',
+          availableLanguage: ['English', 'Khmer'],
+          areaServed: 'KH',
+        },
+        {
+          '@type': 'ContactPoint',
+          contactType: 'sales',
+          email: 'sales@vithean.com',
+          availableLanguage: ['English', 'Khmer'],
+          areaServed: 'KH',
+        },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://help.vithean.com/#manual',
+      name: 'Vithean User Manual',
+      url: 'https://help.vithean.com',
+      inLanguage: 'en',
+      description:
+        'Official user manual for Vithean, the cloud accounting system for businesses in Cambodia.',
+      publisher: { '@id': 'https://poscardigital.com/#organization' },
+      about: { '@id': 'https://vithean.com/#software' },
+      license: 'https://help.vithean.com/about/',
+    },
+  ],
+};
+
 export default defineConfig({
   site: 'https://help.vithean.com',
 
   integrations: [
     starlight({
       title: 'Vithean',
-      description: 'Official user manual for Vithean — smart, cloud-based accounting for small and medium businesses.',
+      description:
+        'Official user manual for Vithean — cloud-based online accounting and business management software for small and medium businesses in Cambodia. Invoicing, bills, inventory, bank reconciliation and reports, in English and Khmer.',
       logo: {
         light: './src/assets/logo.png',
         dark: './src/assets/logo.png',
@@ -57,6 +149,22 @@ export default defineConfig({
           tag: 'meta',
           attrs: { name: 'twitter:card', content: 'summary_large_image' },
         },
+        // Machine-readable product facts for search and AI answer engines.
+        {
+          tag: 'script',
+          attrs: { type: 'application/ld+json' },
+          content: JSON.stringify(structuredData),
+        },
+        // Explicit crawl/index permission (some AI crawlers read the meta tag,
+        // not just robots.txt).
+        {
+          tag: 'meta',
+          attrs: { name: 'robots', content: 'index, follow, max-snippet:-1, max-image-preview:large' },
+        },
+        {
+          tag: 'link',
+          attrs: { rel: 'alternate', type: 'text/plain', href: 'https://help.vithean.com/llms.txt', title: 'llms.txt' },
+        },
       ],
       customCss: ['./src/styles/custom.css'],
       social: {
@@ -75,6 +183,10 @@ export default defineConfig({
       },
 
       sidebar: [
+        {
+          label: 'What is Vithean?',
+          link: '/about/',
+        },
         {
           label: 'Getting Started',
           items: [
