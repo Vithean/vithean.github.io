@@ -22,10 +22,10 @@ features elsewhere makes up for it.
 
 ### 1. CamInv e-invoicing
 
-Cambodia's national e-invoicing system, **CamInv**, is operated by the General
-Department of Taxation under the Ministry of Economy and Finance. It is a
-centralised clearance model: invoices are submitted, validated and approved
-before they count as legally valid tax documents.
+Cambodia's national e-invoicing system, **CamInv**, is administered by the
+**Ministry of Economy and Finance**. It is a centralised clearance model:
+invoices are submitted, validated and approved before they count as legally valid
+tax documents.
 
 This is the single biggest dividing line. Ask any vendor directly: *does your
 software connect to CamInv natively, or do I need a separate tool?* If the answer
