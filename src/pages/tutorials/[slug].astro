@@ -12,33 +12,76 @@ interface Video {
   published?: string | null;
   author?: string | null;
   description?: string;
+  playlistSlug?: string;
+  playlistTitle?: string;
+  position?: number;
+}
+
+interface Playlist {
+  id: string;
+  slug: string;
+  title: string;
+  url: string;
+  order?: string;
+  videos?: Video[];
 }
 
 interface VideoData {
   playlistUrl?: string;
+  playlists?: Playlist[];
   videos?: Video[];
 }
 
+// Every video gets one page, but it is navigated as part of ONE playlist — the
+// one that claimed it in the data file. Prev/next therefore walk that
+// playlist's own order (episode 3 → episode 4), never the global newest-first
+// list, which would jump the reader between two unrelated series.
 export async function getStaticPaths() {
-  const data = (await import('../../data/videos.json')).default as {
-    videos?: Video[];
-  };
-  const videos = data.videos ?? [];
+  const data = (await import('../../data/videos.json')).default as VideoData;
+  const playlists: Playlist[] = data.playlists?.length
+    ? data.playlists
+    : [{ id: '', slug: 'tutorials', title: 'Video tutorials', url: data.playlistUrl ?? '', videos: data.videos ?? [] }];
 
-  return videos.map((video, i) => ({
-    params: { slug: video.slug },
+  const paths: {
+    params: { slug: string };
     props: {
-      video,
-      prev: i > 0 ? videos[i - 1] : null,
-      next: i < videos.length - 1 ? videos[i + 1] : null,
-      total: videos.length,
-      position: i + 1,
-    },
-  }));
+      video: Video;
+      playlist: Playlist;
+      prev: Video | null;
+      next: Video | null;
+      total: number;
+      position: number;
+    };
+  }[] = [];
+  const seen = new Set<string>();
+
+  for (const playlist of playlists) {
+    const videos = playlist.videos ?? [];
+    videos.forEach((video, i) => {
+      // A video in two playlists still renders once, under the first.
+      if (seen.has(video.slug)) return;
+      seen.add(video.slug);
+
+      paths.push({
+        params: { slug: video.slug },
+        props: {
+          video,
+          playlist,
+          prev: i > 0 ? videos[i - 1] : null,
+          next: i < videos.length - 1 ? videos[i + 1] : null,
+          total: videos.length,
+          position: i + 1,
+        },
+      });
+    });
+  }
+
+  return paths;
 }
 
-const { video, prev, next, total, position } = Astro.props as {
+const { video, playlist, prev, next, total, position } = Astro.props as {
   video: Video;
+  playlist: Playlist;
   prev: Video | null;
   next: Video | null;
   total: number;
@@ -46,7 +89,14 @@ const { video, prev, next, total, position } = Astro.props as {
 };
 
 const data = videosData as VideoData;
-const playlistUrl = data.playlistUrl;
+const playlistUrl = playlist?.url ?? data.playlistUrl;
+
+// A numbered series counts up ("Episode 3 of 6"); a reference library does not
+// imply an order, so it just names the collection.
+const isSeries = playlist?.order === 'playlist';
+const eyebrow = isSeries
+  ? `${playlist.title} · Episode ${position} of ${total}`
+  : `${playlist?.title ?? 'Video tutorial'} · ${position} of ${total}`;
 
 const publishedDate = video.published
   ? new Date(video.published).toLocaleDateString(undefined, {
@@ -65,9 +115,7 @@ const publishedDate = video.published
   }}
 >
   <div class="video-page-header">
-    <p class="video-page-eyebrow">
-      Video Tutorial &middot; {position} of {total}
-    </p>
+    <p class="video-page-eyebrow">{eyebrow}</p>
   </div>
 
   <div class="video-player">
@@ -84,9 +132,9 @@ const publishedDate = video.published
   {publishedDate && (
     <p class="video-meta-line">
       Published {publishedDate}
+      &middot; <a href={video.url} target="_blank" rel="noopener">Watch on YouTube</a>
       {playlistUrl && (
-        <> &middot; <a href={video.url} target="_blank" rel="noopener">Watch on YouTube</a>
-        </>
+        <> &middot; <a href={playlistUrl} target="_blank" rel="noopener">Full playlist ↗</a></>
       )}
     </p>
   )}
@@ -101,7 +149,7 @@ const publishedDate = video.published
   <nav class="video-nav" aria-label="Tutorial navigation">
     {prev ? (
       <a href={`/tutorials/${prev.slug}/`} class="prev">
-        <div class="nav-label">← Previous</div>
+        <div class="nav-label">← {isSeries ? 'Previous episode' : 'Previous'}</div>
         <div class="nav-title">{prev.title}</div>
       </a>
     ) : (
@@ -110,7 +158,7 @@ const publishedDate = video.published
 
     {next ? (
       <a href={`/tutorials/${next.slug}/`} class="next">
-        <div class="nav-label">Next →</div>
+        <div class="nav-label">{isSeries ? 'Next episode' : 'Next'} →</div>
         <div class="nav-title">{next.title}</div>
       </a>
     ) : (
@@ -119,6 +167,6 @@ const publishedDate = video.published
   </nav>
 
   <p style="margin-top: 2rem; text-align: center;">
-    <a href="/tutorials/">← Back to all tutorials</a>
+    <a href={`/tutorials/#${playlist?.slug ?? ''}`}>← Back to {playlist?.title ?? 'all tutorials'}</a>
   </p>
 </StarlightPage>

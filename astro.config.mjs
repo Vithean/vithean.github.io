@@ -298,9 +298,16 @@ export default defineConfig({
           ],
         },
         {
+          // The two playlists are sections of one page, reached by anchor —
+          // /tutorials/#<playlist-slug>, matching the section ids that
+          // VideoGrid.astro renders from src/data/videos.json.
           label: 'Video Tutorials',
-          link: '/tutorials/',
           badge: { text: 'New', variant: 'tip' },
+          items: [
+            { label: 'All videos', link: '/tutorials/' },
+            { label: 'Capacity Building — full course', link: '/tutorials/#vithean-capacity-building' },
+            { label: 'Manual — task guides', link: '/tutorials/#vithean-manual' },
+          ],
         },
         {
           label: 'Troubleshooting',

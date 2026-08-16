@@ -1,5 +1,13 @@
 ---
-// Tutorials index — card grid linking to per-video pages (/tutorials/<slug>/).
+// Tutorials index — one section per playlist, each a card grid linking to the
+// per-video pages (/tutorials/<slug>/).
+//
+// Sections render in the order the playlists appear in scripts/fetch-videos.mjs,
+// and the cards within a section in that playlist's own order: the Manual is
+// newest-first (a reference library), Capacity Building keeps YouTube's order
+// (a numbered course that must not play backwards).
+//
+// Pass `playlist="<slug>"` to render a single section; omit it for all of them.
 import videosData from '../data/videos.json';
 
 interface Video {
@@ -12,6 +20,19 @@ interface Video {
   published?: string | null;
   author?: string | null;
   description?: string;
+  playlistSlug?: string;
+  position?: number;
+}
+
+interface Playlist {
+  id: string;
+  slug: string;
+  title: string;
+  description?: string;
+  url: string;
+  order?: string;
+  count?: number;
+  videos?: Video[];
 }
 
 interface VideoData {
@@ -19,18 +40,39 @@ interface VideoData {
   playlistUrl?: string;
   updatedAt?: string | null;
   count?: number;
+  playlists?: Playlist[];
   videos?: Video[];
   error?: string;
 }
 
+interface Props {
+  playlist?: string;
+}
+
+const { playlist: only } = Astro.props;
+
 const data = videosData as VideoData;
-const videos: Video[] = data.videos ?? [];
+
+// Fall back to a single synthetic playlist if the data file predates the
+// multi-playlist format, so an old cache still renders instead of blanking.
+const allPlaylists: Playlist[] = data.playlists?.length
+  ? data.playlists
+  : [{
+      id: data.playlistId ?? '',
+      slug: 'tutorials',
+      title: 'Video tutorials',
+      url: data.playlistUrl ?? '',
+      videos: data.videos ?? [],
+    }];
+
+const playlists = only ? allPlaylists.filter((p) => p.slug === only) : allPlaylists;
+const total = playlists.reduce((n, p) => n + (p.videos?.length ?? 0), 0);
+
 const updated = data.updatedAt
   ? new Date(data.updatedAt).toLocaleDateString(undefined, {
       year: 'numeric', month: 'long', day: 'numeric',
     })
   : null;
-const playlistUrl = data.playlistUrl ?? null;
 
 function formatDate(iso?: string | null) {
   if (!iso) return null;
@@ -38,44 +80,80 @@ function formatDate(iso?: string | null) {
     year: 'numeric', month: 'short', day: 'numeric',
   });
 }
+
+// "6 episodes · watch in order" vs "10 tutorials · newest first" — tells the
+// reader how to approach the section before they start clicking.
+function countLine(p: Playlist) {
+  const n = p.videos?.length ?? 0;
+  const noun = p.order === 'playlist' ? 'episode' : 'tutorial';
+  const hint = p.order === 'playlist' ? 'watch in order' : 'newest first';
+  return `${n} ${noun}${n === 1 ? '' : 's'} · ${hint}`;
+}
 ---
 
-{videos.length === 0 ? (
+{total === 0 ? (
   <div class="video-empty">
     <p><strong>Tutorials are on the way.</strong></p>
     <p style="margin-top:0.5rem;">
-      Video tutorials will appear here automatically once the playlist is published.
-      {playlistUrl && (<> In the meantime you can <a href={playlistUrl} target="_blank" rel="noopener">visit our playlist on YouTube</a>.</>)}
+      Video tutorials will appear here automatically once the playlists are published.
+      {allPlaylists[0]?.url && (<> In the meantime you can <a href={allPlaylists[0].url} target="_blank" rel="noopener">visit our channel on YouTube</a>.</>)}
     </p>
   </div>
 ) : (
   <>
-    <p class="video-meta-line">
-      <strong>{videos.length}</strong> tutorial{videos.length === 1 ? '' : 's'}
-      {updated && (<> &middot; last refreshed {updated}</>)}
-      {playlistUrl && (<> &middot; <a href={playlistUrl} target="_blank" rel="noopener">View full playlist on YouTube ↗</a></>)}
-    </p>
+    {updated && !only && (
+      <p class="video-meta-line">
+        <strong>{total}</strong> video{total === 1 ? '' : 's'} across{' '}
+        <strong>{playlists.length}</strong> playlist{playlists.length === 1 ? '' : 's'}
+        {' '}&middot; last refreshed {updated}
+      </p>
+    )}
 
-    <div class="video-grid">
-      {videos.map((v) => (
-        <a class="video-card" href={`/tutorials/${v.slug}/`} title={v.title}>
-          <div class="thumb">
-            <img src={v.thumbnail} alt={v.title} loading="lazy" width="320" height="180" />
-            <div class="play-btn" aria-hidden="true">
-              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.6)"/>
-                <path d="M26 20 L46 32 L26 44 Z" fill="white"/>
-              </svg>
-            </div>
+    {playlists.map((p) => (
+      <section class="video-section" id={p.slug} aria-label={p.title}>
+        <h2 class="video-section-title">
+          {p.title}
+          {p.order === 'playlist' && <span class="video-section-tag">Series</span>}
+        </h2>
+
+        {p.description && <p class="video-section-desc">{p.description}</p>}
+
+        <p class="video-meta-line">
+          {countLine(p)}
+          {p.url && (<> &middot; <a href={p.url} target="_blank" rel="noopener">View this playlist on YouTube ↗</a></>)}
+        </p>
+
+        {(p.videos?.length ?? 0) === 0 ? (
+          <div class="video-empty">
+            <p>This playlist has no videos yet.</p>
           </div>
-          <div class="video-meta">
-            <p class="video-title">{v.title}</p>
-            {formatDate(v.published) && (
-              <p class="video-date">{formatDate(v.published)}</p>
-            )}
+        ) : (
+          <div class="video-grid">
+            {p.videos!.map((v) => (
+              <a class="video-card" href={`/tutorials/${v.slug}/`} title={v.title}>
+                <div class="thumb">
+                  <img src={v.thumbnail} alt={v.title} loading="lazy" width="320" height="180" />
+                  <div class="play-btn" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.6)"/>
+                      <path d="M26 20 L46 32 L26 44 Z" fill="white"/>
+                    </svg>
+                  </div>
+                  {p.order === 'playlist' && v.position && (
+                    <span class="video-episode" aria-hidden="true">{v.position}</span>
+                  )}
+                </div>
+                <div class="video-meta">
+                  <p class="video-title">{v.title}</p>
+                  {formatDate(v.published) && (
+                    <p class="video-date">{formatDate(v.published)}</p>
+                  )}
+                </div>
+              </a>
+            ))}
           </div>
-        </a>
-      ))}
-    </div>
+        )}
+      </section>
+    ))}
   </>
 )}

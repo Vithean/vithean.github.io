@@ -287,6 +287,70 @@
 }
 
 /* ============================================================
+   Playlist sections (tutorials index)
+   ============================================================ */
+/* One section per YouTube playlist. The rule above each heading (except the
+   first) is what separates two series visually without another box. */
+.video-section {
+  /* Anchored from the sidebar and from "back to playlist" links, so keep the
+     heading clear of Starlight's sticky header when jumped to. */
+  scroll-margin-top: 5rem;
+}
+
+.video-section + .video-section {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--sl-color-gray-5);
+}
+
+.video-section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+
+.video-section-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.6rem;
+  border-radius: 999px;
+  background: var(--sl-color-accent-low);
+  color: var(--sl-color-accent);
+  /* Sits next to an h2 — do not inherit its size. */
+  line-height: 1.6;
+}
+
+.video-section-desc {
+  margin: 0.4rem 0 0.6rem;
+  color: var(--sl-color-gray-2);
+  max-width: 62ch;
+}
+
+/* Episode number, shown only for playlists watched in order. */
+.video-episode {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 1;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  padding: 0 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--vithean-purple);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* ============================================================
    Video grid (tutorials index)
    ============================================================ */
 .video-grid {

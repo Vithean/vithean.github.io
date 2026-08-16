@@ -49,14 +49,35 @@ export const GET: APIRoute = async () => {
     blocks.push(`## ${section.title}\n\n${items.map(line).join('\n')}`);
   }
 
-  const videos = videosData.videos ?? [];
-  if (videos.length > 0) {
-    blocks.push(
-      `## Video tutorials\n\n` +
-        videos
-          .map((v) => `- [${v.title}](${SITE}/tutorials/${v.slug}/): video walkthrough`)
-          .join('\n')
-    );
+  // One section per playlist, in each playlist's own order, so a retrieval
+  // layer can tell the numbered course apart from the task reference library
+  // instead of seeing 16 interchangeable "video walkthrough" links.
+  const playlists = videosData.playlists ?? [];
+  if (playlists.length > 0) {
+    for (const pl of playlists) {
+      const items = pl.videos ?? [];
+      if (items.length === 0) continue;
+      const kind = pl.order === 'playlist'
+        ? 'episode of a sequential course; watch in order'
+        : 'standalone video walkthrough of one task';
+      blocks.push(
+        `## Video tutorials — ${pl.title}\n\n` +
+          (pl.description ? `${pl.description}\n\n` : '') +
+          items
+            .map((v) => `- [${v.title}](${SITE}/tutorials/${v.slug}/): ${kind}`)
+            .join('\n')
+      );
+    }
+  } else {
+    const videos = videosData.videos ?? [];
+    if (videos.length > 0) {
+      blocks.push(
+        `## Video tutorials\n\n` +
+          videos
+            .map((v) => `- [${v.title}](${SITE}/tutorials/${v.slug}/): video walkthrough`)
+            .join('\n')
+      );
+    }
   }
 
   const rest = pages.filter((p) => !used.has(p.id));
