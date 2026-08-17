@@ -230,11 +230,13 @@ export default defineConfig({
         },
       ],
       customCss: ['./src/styles/custom.css'],
-      social: {
-        facebook: 'https://facebook.com/vithean_official',
-        telegram: 'https://t.me/vithean_support',
-        email: 'mailto:contact@vithean.com',
-      },
+      // Array form, required since Starlight 0.33 — the old object keyed by
+      // icon name no longer validates.
+      social: [
+        { icon: 'facebook', label: 'Facebook', href: 'https://facebook.com/vithean_official' },
+        { icon: 'telegram', label: 'Telegram', href: 'https://t.me/vithean_support' },
+        { icon: 'email', label: 'Email', href: 'mailto:contact@vithean.com' },
+      ],
       editLink: {
         baseUrl: 'https://github.com/Vithean/vithean.github.io/edit/main/',
       },

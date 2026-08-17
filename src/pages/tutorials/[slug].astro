@@ -131,7 +131,9 @@ const publishedDate = video.published
 
   {publishedDate && (
     <p class="video-meta-line">
-      Published {publishedDate}
+      {/* Explicit space: Astro 7 trims the newline between the date and the
+          separator, which ran them together as "2026· Watch on YouTube". */}
+      Published {publishedDate}{' '}
       &middot; <a href={video.url} target="_blank" rel="noopener">Watch on YouTube</a>
       {playlistUrl && (
         <> &middot; <a href={playlistUrl} target="_blank" rel="noopener">Full playlist ↗</a></>

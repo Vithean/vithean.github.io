@@ -23,4 +23,5 @@ Reuse an existing code when work continues; mint a new one only for genuinely ne
 
 | Code | Type | Title | Status | Also in | Updated |
 |---|---|---|---|---|---|
+| [VTH-2026-DEPS](VTH-2026-DEPS-astro-7-starlight-upgrade.md) | report | Clear the Dependabot backlog — Astro 5→7, Starlight 0.30→0.41 | done | — | 2026-08-17 |
 | [VTH-2026-VIDEOS](VTH-2026-VIDEOS-capacity-building-playlist.md) | feat | Second YouTube playlist (Capacity Building) on the tutorials page | done | — | 2026-08-17 |
