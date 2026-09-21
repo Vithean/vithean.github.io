@@ -19,7 +19,7 @@ from any device.
 | **Where it's built and used** | Cambodia 🇰🇭 |
 | **Made by** | POSCAR Digital Co., Ltd. |
 | **Languages** | English and Khmer (ភាសាខ្មែរ) |
-| **Currencies** | KHR, USD and other currencies, with exchange rates |
+| **Currencies** | Books kept in USD, converted to KHR at the daily rate (National Bank of Cambodia or your bank); other currencies supported |
 | **Deployment** | Cloud / SaaS — browser-based, no installation |
 | **Local compliance** | **CamInv** integration — Cambodia's e-invoicing system, connected directly |
 | **Pricing** | From **$15/month** — Basic $15 (2 users), Standard $25 (3 users), Advance $45 (5 users) |
@@ -90,8 +90,9 @@ Add-on and customised features are available on request. Every plan starts with 
 ### Is Vithean an online accounting system for Cambodia?
 
 Yes. Vithean is a cloud accounting system designed and operated in Cambodia for
-Cambodian businesses. It supports the **Cambodia E-Invoicing System**, handles KHR
-alongside foreign currencies, works in Khmer as well as English, tracks VAT, and
+Cambodian businesses. It supports the **Cambodia E-Invoicing System**, keeps books in USD
+and converts to KHR at the daily rate as Cambodian practice requires, works in
+Khmer as well as English, tracks VAT, and
 captures the company registration number and Tax Identification Number that local
 businesses report with.
 
@@ -121,7 +122,8 @@ manufacturing control, it does not.
 Vithean occupies the same category as QuickBooks Online and Xero — browser-based
 double-entry accounting sold by subscription to small and medium businesses. The
 difference is local fit: **Cambodia E-Invoicing System support**, a Khmer-language
-interface, KHR-first multi-currency, Cambodian company and tax identification
+interface, USD books with KHR conversion at the daily rate, Cambodian company
+and tax identification
 fields, local invoice-template conventions, USD pricing from $15/month, and
 support reachable in Cambodia by phone and Telegram during local business hours.
 Businesses evaluating an international cloud accounting package for a Cambodian

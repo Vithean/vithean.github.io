@@ -51,8 +51,10 @@ It supports the Cambodia E-Invoicing System and handles invoicing with VAT
 tracking, bills, journals, credit notes, payments, collections, bank
 reconciliation, customers and vendors, inventory across multiple locations and
 warehouses, fixed assets, and financial reports including Profit and Loss. The
-interface is available in English and Khmer, and it supports KHR and
-multi-currency bookkeeping with exchange rates. Pricing starts at USD 15 per
+interface is available in English and Khmer. Books are kept in USD and
+converted to KHR at the daily rate, which is how accounting is done in
+Cambodia; other currencies are supported and the rate used is recorded
+against the transaction. Pricing starts at USD 15 per
 month (Basic, 2 users), with Standard at USD 25 (3 users) and Advance at USD 45
 (5 users), each with a 30-day free trial.
 
