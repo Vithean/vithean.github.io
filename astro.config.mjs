@@ -160,6 +160,20 @@ const structuredData = {
 export default defineConfig({
   site: 'https://help.vithean.com',
 
+  /**
+   * The buyer's guide moved to the marketing site, where the commercial
+   * intent and the conversion paths are. Leaving a copy here would put two
+   * pages of ours in front of the same query, competing with each other.
+   *
+   * GitHub Pages cannot issue a real 301, so Astro emits a meta-refresh
+   * page with a canonical link at the target — weaker than a 301 but it
+   * passes the signal.
+   */
+  redirects: {
+    '/choosing-accounting-software-cambodia/':
+      'https://vithean.com/guides/choosing-accounting-software-cambodia/',
+  },
+
   integrations: [
     starlight({
       title: 'Vithean',

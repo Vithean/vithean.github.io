@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-17T05:58:55.893Z",
+  "updatedAt": "2026-09-21T04:54:27.288Z",
   "count": 16,
   "playlists": [
     {
@@ -101,7 +101,8 @@
           "playlistTitle": "Vithean Capacity Building",
           "position": 6
         }
-      ]
+      ],
+      "stale": true
     },
     {
       "id": "PLaWNim5ubBGtianmfbq8L-hBkerht2-nU",
@@ -262,7 +263,8 @@
           "playlistTitle": "Vithean Manual",
           "position": 10
         }
-      ]
+      ],
+      "stale": true
     }
   ],
   "videos": [
